@@ -1,11 +1,19 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
-import Home from '../views/Home.vue'
 
 const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
+    redirect: '/ring-button'
+  },
+  {
+    path: '/home',
     name: 'Home',
-    component: Home
+    component: () => import("../views/Home.vue")
+  },
+  {
+    path: '/ring-button',
+    name: 'Ring-Button',
+    component: () => import("../views/Ring-Button.vue")
   },
 ]
 

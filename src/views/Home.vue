@@ -1,13 +1,17 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="https://www.tailwindcss.cn/favicon-32x32.png">
-  </div>
+  <layout-card>
+  </layout-card>
 </template>
 
-<script lang="ts">
+<script>
+import LayoutCard from '@/components/layout-card.vue'
 import { defineComponent } from 'vue'
-
 export default defineComponent({
-  
-}) 
+    components: {
+        LayoutCard
+    },
+})
 </script>
+
+<style scoped>
+</style>

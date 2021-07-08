@@ -1,5 +1,8 @@
 # my_tailwind_vue
 
+采用vue + tailwind-css，根据tailwind-css自编写有趣的样式
+在学习过程中，也方便了练习
+
 ## Project setup
 ```
 npm install

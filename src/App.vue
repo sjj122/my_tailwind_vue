@@ -7,9 +7,9 @@
       <template #content>
           <article class="grid grid-cols-4 gap-2 text-sm">
             <div class="btn-blue" @click="jumpPage('/ring-button')">按钮、输入框边框</div>
-            <div class="btn-yellow" @click="jumpPage(2)">资料卡片</div>
-            <div class="btn-red" @click="jumpPage(3)">变换</div>
-            <div class="btn-green" @click="jumpPage(4)">flex与grid布局</div>
+            <div class="btn-yellow" @click="jumpPage('/card')">响应式的资料卡片</div>
+            <div class="btn-red" @click="jumpPage('/transform')">变换</div>
+            <div class="btn-green" @click="jumpPage('/flexAgrid')">flex与grid布局</div>
             <div class="btn-green">Click me!</div>
           </article>
       </template>
@@ -39,5 +39,5 @@ export default defineComponent({
 })
 </script>
 <style scoped>
-
+@import url('//at.alicdn.com/t/font_2642879_rmhr708gcf.css');
 </style>

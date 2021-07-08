@@ -6,15 +6,20 @@ const routes: Array<RouteRecordRaw> = [
     redirect: '/ring-button'
   },
   {
-    path: '/home',
-    name: 'Home',
-    component: () => import("../views/Home.vue")
+    path: '/card',
+    name: 'Card',
+    component: () => import("@/views/Card.vue")
   },
   {
     path: '/ring-button',
     name: 'Ring-Button',
-    component: () => import("../views/Ring-Button.vue")
+    component: () => import("@/views/Ring-Button.vue")
   },
+  {
+    path: '/transform',
+    name: 'Transform',
+    component: () => import('@/views/Transform.vue')
+  }
 ]
 
 const router = createRouter({

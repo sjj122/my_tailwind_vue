@@ -46,11 +46,13 @@ module.exports = {
         // ---------
         skew: 'skew .5s linear infinite',
         skew_reverse: 'skew_reverse .5s linear infinite',
+        wheelRolling: 'wheelRolling 6s ease-in-out infinite',
+        wheelRotate: 'wheelRotate 2.5s ease-in-out infinite'
       },
       keyframes: {
         move: {
           '0%, 100%': { transform: 'translateX(0)' },
-          '50%': { transform: 'translateX(300px)' }
+          '50%': { transform: 'translateX(500px)' }
         },
         move2: {
           '0%, 100%': { transform: 'translate(0, 0)' },
@@ -89,6 +91,16 @@ module.exports = {
           '0%, 100%': { transform: 'skew(-30deg, 0)' },
           '50%': { transform: 'skew(30deg, 0)' }
         },
+        wheelRolling: {
+          "0, 100%": { transform: 'translate(0, 0) rotate(0)' },
+          "40%": { transform: 'translate(720px, 0) rotate(720deg)' },
+          "50%": { transform: 'translate(720px, 50px) rotate(1080deg)' },
+          "90%": { transform: 'translate(0, 50px) rotate(360deg)' },
+        },
+        wheelRotate: {
+          "0, 100%": { transform: 'rotate(0)' },
+          '50%': { transform: 'rotate(1800deg)' }
+        }
       }
     },
   },

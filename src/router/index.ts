@@ -19,6 +19,21 @@ const routes: Array<RouteRecordRaw> = [
     path: '/transform',
     name: 'Transform',
     component: () => import('@/views/Transform.vue')
+  },
+  {
+    path: '/grid',
+    name: 'Grid',
+    component: () => import('@/views/Grid.vue')
+  },
+  {
+    path: '/flex',
+    name: 'Flex',
+    component: () => import('@/views/Flex.vue')
+  },
+  {
+    path: '/interactive',
+    name: 'Interactive',
+    component: () => import('@/views/Interactive.vue')
   }
 ]
 

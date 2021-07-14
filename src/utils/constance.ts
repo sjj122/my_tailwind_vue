@@ -49,5 +49,22 @@ export const btn_or_input_lists: btn_or_input_item[] = [
         eleStyle: 'placeholder-red-400 transform transition focus:scale-75',
         code: ['聚焦缩小', 'transform', 'transition', 'focus:scale-75'],
         text: '点我缩小!'
+    },
+    {
+        isBtn: true,
+        eleStyle: 'bg-gradient-to-r from-purple-400 via-pink-100 to-blue-500 text-white font-light border border-green-100 border-solid rounded-md hover:bg-green-400',
+        code: ['渐变背景色(r,l,t,b)', 'bg-gradient-to-r', 'from-purple-400', 'via-pink-100', 'to-blue-500'],
+    },
+    {
+        isBtn: false,
+        eleStyle: 'bg-gray-200 focus:bg-gray-50',
+        code: ['输入框聚焦改变颜色', 'bg-gray-200', 'focus:bg-gray-50'],
+        text: 'Focus me'
+    },
+    {
+        isBtn: true,
+        eleStyle: 'bg-gradient-to-r from-indigo-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500 text-white rounded-lg font-light',
+        code: ['bg-gradient-to-r','from-indigo-400', 'to-blue-500', 'hover:from-pink-500', 'hover:to-yellow-500'],
+        text: 'Hover me'
     }
 ]

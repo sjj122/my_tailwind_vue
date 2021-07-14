@@ -6,15 +6,10 @@
       </p>
     </template>
     <template #content>
-      <figure class="flex flex-col justify-evenly items-center">
+      <figure class="flex flex-col justify-evenly items-center overscroll-auto">
             <!-- 小方块 transform -->
             <div class="w-full flex justify-between mt-1 border-b-2 border-white border-solid">
-                <div class="w-1/4 font-medium rounded-lg bg-black bg-opacity-75 overflow-x-auto p-4 text-sm text-white">
-                    <p class="text-lg mb-1 text-red-300">Translate：</p>
-                    <p class="font-mono">translate(x, y)</p>
-                    <p class="font-mono">translateX()</p>
-                    <p class="font-mono">translateY()</p>
-                </div>
+                <code-area codeTitle="Translate：" :codeContent="code1" :width="`w-1/4`"></code-area>
                 <div class="w-3/4 flex flex-col justify-between rounded-lg ml-1">
                     <div class="w-14 h-10 bg-black animate-moveLinear"></div>
                     <div class="w-14 h-10 bg-gray-400 animate-moveEaseInOut"></div>
@@ -24,13 +19,7 @@
             </div>
             <!-- 小圆形 scale -->
             <div class="w-full flex justify-between mt-1 border-b-2 border-white border-solid">
-                <div class="w-1/4 font-medium rounded-lg bg-black bg-opacity-75 overflow-y-auto p-4 text-sm text-white scroll-bar">
-                    <p class="text-lg mb-1 text-red-300">Scale：</p>
-                    <p class="font-mono">@keyframes</p>
-                    <p class="font-mono whitespace-nowrap">animation: name duration timing-function delay iteration-count </p>
-                    <p class="font-mono">scale(2)</p>
-                    <p class="font-mono">scale(.8)</p>
-                </div>
+                <code-area codeTitle="Scale：" :codeContent="code2" :width="`w-1/4`"></code-area>
                 <div class="w-3/4 flex justify-evenly items-center rounded-lg ml-1">
                     <div class="flex-1 text-center border-r-2 border-dashed border-white-400">
                         <span class="absolute w-10 h-10 bg-pink-400 opacity-75 rounded-full animate-ping"></span>
@@ -48,12 +37,7 @@
             </div>
             <!-- 小方块 rotate -->
             <div class="w-full flex justify-between mt-1 border-b-2 border-white border-solid">
-                <div class="w-1/4 font-medium rounded-lg bg-black bg-opacity-75 overflow-y-auto p-4 text-sm text-white scroll-bar">
-                    <p class="text-lg mb-1 text-red-300">Rotate：</p>
-                    <p class="font-mono">rotate(x, y)</p>
-                    <p class="font-mono">rotateX(0deg)</p>
-                    <p class="font-mono">rotateY(0deg)</p>
-                </div>
+                <code-area codeTitle="Rotate：" :codeContent="code3" :width="`w-1/4`"></code-area>
                 <div class="w-3/4 flex justify-evenly items-center rounded-lg ml-1">
                     <template v-for="(item, index) in rotateRing" :key="index">
                         <span>{{ item }}：</span>
@@ -63,12 +47,7 @@
             </div>
             <!-- 小方块 skew -->
             <div class="w-full flex justify-between mt-1 border-b-2 border-white border-solid">
-                <div class="w-1/4 font-medium rounded-lg bg-black bg-opacity-75 overflow-y-auto p-4 text-sm text-white scroll-bar">
-                    <p class="text-lg mb-1 text-red-300">Skew：</p>
-                    <p class="font-mono">skew(x, y)</p>
-                    <p class="font-mono">skewX(0deg)</p>
-                    <p class="font-mono">skewY(0deg)</p>
-                </div>
+                <code-area codeTitle="Skew：" :codeContent="code4" :width="`w-1/4`"></code-area>
                 <div class="w-3/4 relative flex justify-evenly items-center rounded-lg ml-1">
                     <!-- 单 -->
                     <div class="w-12 h-12 bg-gray-400 animate-skew">
@@ -117,6 +96,18 @@
                     </div>
                 </div>
             </div>
+            <!-- 小方块 animate -->
+            <div class="w-full flex justify-between mt-1 border-b-2 border-white border-solid">
+                <code-area codeTitle="Animate：" :codeContent="code5" :width="`w-1/4`"></code-area>
+                <div class="w-3/4 relative rounded-lg ml-1 text-left">
+                    <div class="w-12 h-12 border border-gray-500 border-solid rounded-full ml-16 animate-wheelRolling">
+                        <span class="w-2 h-2 bg-black rounded-full inline-flex -ml-0.5"></span>
+                    </div>
+                    <div class="w-12 h-12 border border-gray-500 border-solid rounded-full mr-8 float-right animate-wheelRotate">
+                        <span class="w-2 h-2 bg-black rounded-full inline-flex -ml-0.5"></span>
+                    </div>
+                </div>
+            </div>
       </figure>
     </template>
   </layout-card>
@@ -125,15 +116,27 @@
 <script>
 import RotateRing from '@/components/transform/rotating-ring.vue'
 import LayoutCard from '@/components/layout-card.vue'
+import CodeArea from '@/components/codeArea.vue'
 import { defineComponent } from 'vue'
 export default defineComponent({
     components: {
-        LayoutCard, RotateRing
+        LayoutCard, RotateRing,CodeArea
     },
     setup() {
         const rotateRing = ['fast', 'normal', 'slow']
+
+        const code1 = ['translate(x, y)', 'translateX()', 'translateY()']
+        const code2 = ['@keyframes','animation: name duration timing-function delay iteration-count ','scale(2)','scale(.8)']
+        const code3 = ['rotate(x, y)', 'rotateX(0deg)', 'rotateY(0deg)']
+        const code4 = ['skew(x, y)','skewX(0deg)','skewY(0deg)']
+        const code5 = ['@keyframes','animation','ease-in-out/linear']
         return {
-            rotateRing
+            rotateRing,
+            code1,
+            code2,
+            code3,
+            code4,
+            code5
         }
     }
 })

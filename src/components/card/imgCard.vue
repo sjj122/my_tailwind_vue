@@ -9,17 +9,17 @@
               <div class="btn-blue flex justify-center items-center sm:w-24 sm:h-6 sm:text-xs lg:w-32 lg:h-10 lg:text-base">Show me!</div>
             </section>
         </div>
-        <div class="mt-2 rounded-lg bg-black bg-opacity-75 overflow-x-auto p-6 text-sm text-white">
-            <p class="font-mono">box: lg:flex</p>
-            <p class="font-mono">img: md:w-auto md:h-full lg:w-1/2 lg:h-auto</p>
-            <p class="font-mono">button: sm:w-24 sm:h-6 sm:text-xs lg:w-32 lg:h-10 lg:text-base</p>
-        </div>
+        <code-area codeTitle="card:" :codeContent="code1"></code-area>
     </figure>
 </template>
 
 <script>
 import { defineComponent } from 'vue'
+import CodeArea from '@/components/codeArea.vue'
 export default defineComponent({
+    components: {
+      CodeArea
+    },
     setup() {
       function onmousedown(e) {
         console.log(e)
@@ -30,10 +30,12 @@ export default defineComponent({
       function onmouseup(e) {
         console.log(e)
       }
+      const code1 = ['box: lg:flex','img: md:w-auto md:h-full lg:w-1/2 lg:h-auto','button: sm:w-24 sm:h-6 sm:text-xs lg:w-32 lg:h-10 lg:text-base']
       return {
         onmousedown,
         onmousemove,
-        onmouseup
+        onmouseup,
+        code1
       }
     }
 })

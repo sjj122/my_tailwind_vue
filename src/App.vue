@@ -5,12 +5,13 @@
           <p class="text-2xl text-center p-3">tailwind CSS Style List</p>
       </template>
       <template #content>
-          <article class="grid grid-cols-4 gap-2 text-sm">
-            <div class="btn-blue" @click="jumpPage('/ring-button')">按钮、输入框边框</div>
+          <article class="grid grid-cols-12 gap-2 text-md text-center">
+            <div class="btn-blue h-20" @click="jumpPage('/ring-button')">按钮、输入框边框</div>
             <div class="btn-yellow" @click="jumpPage('/card')">响应式的资料卡片</div>
             <div class="btn-red" @click="jumpPage('/transform')">变换</div>
-            <div class="btn-green" @click="jumpPage('/flexAgrid')">flex与grid布局</div>
-            <div class="btn-green">Click me!</div>
+            <div class="btn-green" @click="jumpPage('/grid')">Grid布局</div>
+            <div class="btn-yellow" @click="jumpPage('/flex')">Flex布局</div>
+            <div class="btn-blue" @click="jumpPage('/interactive')">交互</div>
           </article>
       </template>
     </layout-card>

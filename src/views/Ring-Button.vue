@@ -1,10 +1,10 @@
 <template>
   <layout-card class="mt-3" style="height: 82vh;">
     <template #title>
-      <p class="text-lg font-extralight p-2 tracking-wide border-white border-solid border-b-2">按钮、输入框边框</p>
+      <p class="text-lg font-extralight p-2 tracking-wide border-white border-solid border-b-2 title w-5/6 bg-gray-200 z-10">按钮、输入框边框</p>
     </template>
     <template #content>
-      <div class="m-4 content-container">
+      <div class="m-4 content-container mt-12">
         <ring-button class="ring-button" v-for="(item, index) in btn_or_input_lists" :key="index" :elementType="item.isBtn" :code="item.code" :eleStyle="item.eleStyle" :text="item.text"></ring-button>
       </div>
     </template>

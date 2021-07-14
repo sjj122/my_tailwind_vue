@@ -1,12 +1,12 @@
 <template>
   <layout-card class="mt-3" style="height: 82vh;">
     <template #title>
-      <p class="text-lg font-extralight p-2 tracking-wide border-white border-solid border-b-2">
+      <p class="text-lg font-extralight p-2 tracking-wide border-white border-solid border-b-2 title w-5/6 bg-gray-200 z-10">
         变换<span class="text-sm text-yellow-900">[transform transition translate rotate scale skew animate]</span>
       </p>
     </template>
     <template #content>
-      <figure class="flex flex-col justify-evenly items-center overscroll-auto">
+      <figure class="flex flex-col justify-evenly items-center overscroll-auto mt-12">
             <!-- 小方块 transform -->
             <div class="w-full flex justify-between mt-1 border-b-2 border-white border-solid">
                 <code-area codeTitle="Translate：" :codeContent="code1" :width="`w-1/4`"></code-area>

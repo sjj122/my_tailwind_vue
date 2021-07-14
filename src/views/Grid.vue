@@ -1,12 +1,12 @@
 <template>
   <layout-card class="mt-3" style="height: 82vh;">
     <template #title>
-      <p class="text-lg font-extralight p-2 tracking-wide border-white border-solid border-b-2">
+      <p class="text-lg font-extralight p-2 tracking-wide border-white border-solid border-b-2 title w-5/6 bg-gray-200 z-10">
         Grid布局<span class="text-sm text-yellow-900">[grid grid-col(row)-[x] col-start-[x] col-end-[x] col-span-[x]]</span>
       </p>
     </template>
     <template #content>
-      <figure class="flex items-center justify-around flex-wrap">
+      <figure class="flex items-center justify-around flex-wrap mt-12">
         <!-- 1. -->
         <article class="w-1/3">
           <section class="p-3 grid grid-cols-3 gap-2 transform -rotate-1 rounded-lg text-blue-400 bg-indigo-400 text-2xl">

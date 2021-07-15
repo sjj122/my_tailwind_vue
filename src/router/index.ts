@@ -34,7 +34,27 @@ const routes: Array<RouteRecordRaw> = [
     path: '/interactive',
     name: 'Interactive',
     component: () => import('@/views/Interactive.vue')
-  }
+  },
+  {
+    path: '/table',
+    name: 'Table',
+    component: () => import('@/views/Table.vue')
+  },
+  {
+    path: '/size',
+    name: 'Size',
+    component: () => import('@/views/Size.vue')
+  },
+  {
+    path: '/typesetting',
+    name: 'Typesetting',
+    component: () => import('@/views/Typesetting.vue')
+  },
+  {
+    path: '/background',
+    name: 'Background',
+    component: () => import('@/views/Background.vue')
+  },
 ]
 
 const router = createRouter({

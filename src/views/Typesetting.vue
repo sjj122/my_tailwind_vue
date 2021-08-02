@@ -2,7 +2,7 @@
   <layout-card class="mt-3" style="height: 82vh;">
         <template #title>
         <p class="text-lg font-extralight p-2 tracking-wide border-white border-solid border-b-2 title w-5/6 bg-gray-200 z-10">
-            排版<span class="text-sm text-yellow-900">[]</span>
+            排版<span class="text-sm text-yellow-900">[字体(大小，平滑度，样式，粗细，数字变形) | 行高 | 列表项标记类型及位置 | 占位文本颜色及不透明度 | 文本对齐，颜色，不透明度，装饰，转换，溢出 | 垂直对齐 | 空格 | 文本换行]</span>
         </p>
         </template>
         <template #content>
@@ -54,7 +54,56 @@
                 </article>
                 <code-area codeTitle="字体：" :codeContent="code1"></code-area>
                 <article class="p-2 m-2 bg-green-200 rounded-sm">
-                    
+                    <p><span class="text-red-800">占位文本颜色、不透明度：</span></p>
+                    <input type="text" class="p-2 border border-red-300 placeholder-red-300 outline-none focus:ring-1 focus:ring-red-300" placeholder="请输入内容...">
+                    <input type="text" class="ml-2 p-2 border border-red-300 placeholder-red-300 placeholder-opacity-50 outline-none focus:ring-1 focus:ring-red-300" placeholder="请输入内容...">
+                    <p><span class="text-red-800">文本对齐：</span></p>
+                    <p class="border border-blue-300 p-2 text-left">1、沪港通：复星医药、万华化学、中国平安北向资金分别净买入7.92亿、3.90亿、2.20亿；北方稀土、贵州茅台、隆基股份遭北向资金净卖出6.07亿、6.82亿、7.02亿。
+2、深港通：京东方A、五粮液、TCL科技北向资金净买入7.47亿、6.62亿、2.14亿；宁德时代遭北向资金净卖出9.58亿。</p>
+                    <p class="border border-blue-300 mt-2 p-2 text-center">1、沪港通：复星医药、万华化学、中国平安北向资金分别净买入7.92亿、3.90亿、2.20亿；北方稀土、贵州茅台、隆基股份遭北向资金净卖出6.07亿、6.82亿、7.02亿。
+2、深港通：京东方A、五粮液、TCL科技北向资金净买入7.47亿、6.62亿、2.14亿；宁德时代遭北向资金净卖出9.58亿。</p>
+                    <p class="border border-blue-300 mt-2 p-2 text-right">1、沪港通：复星医药、万华化学、中国平安北向资金分别净买入7.92亿、3.90亿、2.20亿；北方稀土、贵州茅台、隆基股份遭北向资金净卖出6.07亿、6.82亿、7.02亿。
+2、深港通：京东方A、五粮液、TCL科技北向资金净买入7.47亿、6.62亿、2.14亿；宁德时代遭北向资金净卖出9.58亿。</p>
+                    <p class="border border-blue-300 mt-2 p-2 text-justify">1、沪港通：复星医药、万华化学、中国平安北向资金分别净买入7.92亿、3.90亿、2.20亿；北方稀土、贵州茅台、隆基股份遭北向资金净卖出6.07亿、6.82亿、7.02亿。
+2、深港通：京东方A、五粮液、TCL科技北向资金净买入7.47亿、6.62亿、2.14亿；宁德时代遭北向资金净卖出9.58亿。</p>
+                    <p><span class="text-red-800">文本颜色：</span></p>
+                    <p class="text-current">text-current 五粮液、TCL科技北向资金净买入7.47亿、6.62亿、2.14亿；宁德时代遭北向资金净卖出9.58亿。</p>
+                    <p class="text-gray-100">text-gray-100 五粮液、TCL科技北向资金净买入7.47亿、6.62亿、2.14亿；宁德时代遭北向资金净卖出9.58亿。</p>
+                    <p class="text-red-800 text-opacity-50">text-red-800 text-opacity-50 五粮液、TCL科技北向资金净买入7.47亿、6.62亿、2.14亿；宁德时代遭北向资金净卖出9.58亿。</p>
+                    <p><span class="text-red-800">文本装饰：</span></p>
+                    <p class="underline">underline用于控制文本装饰的实用功能类。</p>
+                    <p class="line-through">line-through用于控制文本装饰的实用功能类。</p>
+                    <p class="no-underline">no-underline用于控制文本装饰的实用功能类。</p>
+                    <p><span class="text-red-800">文本转换：</span></p>
+                    <p class="uppercase">uppercase my name is sjj</p>
+                    <p class="lowercase">lowercase MY name IS sjj</p>
+                    <p class="capitalize">capitalize my name is sjj</p>
+                    <p><span class="text-red-800">文本溢出：</span></p>
+                    <p class="w-64 truncate">truncate 不换行 用于控制元素中文本溢出的功能类。</p>
+                    <p class="w-64 overflow-ellipsis overflow-hidden">overflow-ellipsis 用于控制元素中文本溢出的功能类。</p>
+                    <p class="w-64 border overflow-clip overflow-hidden">overflow-clip 在极限边界裁剪 用于控制元素中文本溢出的功能类。</p>
+                    <p><span class="text-red-800">垂直对齐(对准基线)：</span></p>
+                    <p class="h-8 mb-1 align-baseline border border-blue-300">align-baseline 用于控制内联或表格单元格的垂直对齐的功能类</p>
+                    <p class="h-8 mb-1 align-top border border-blue-300">align-top 用于控制内联或表格单元格的垂直对齐的功能类</p>
+                    <p class="h-8 mb-1 align-middle border border-blue-300">align-middle 用于控制内联或表格单元格的垂直对齐的功能类</p>
+                    <p class="h-8 mb-1 align-bottom border border-blue-300">align-bottom 用于控制内联或表格单元格的垂直对齐的功能类</p>
+                    <p class="h-8 mb-1 align-text-top border border-blue-300">align-text-top 用于控制内联或表格单元格的垂直对齐的功能类</p>
+                    <p class="h-8 mb-1 align-text-bottom border border-blue-300">align-text-bottom 用于控制内联或表格单元格的垂直对齐的功能类</p>
+                    <p><span class="text-red-800">空格：</span></p>
+                    <p class=" whitespace-nowrap">whitespace-nowrap 
+                        来防止文本在元素中被包裹。换行和空格将被折叠。</p>
+                    <p class=" whitespace-pre">whitespace-pre 保留元素中的换行和空格。
+                        文本不会被包装。</p>
+                    <p class=" whitespace-pre-line">whitespace-pre-line 保留换行，但不保留元素中的空格。
+                        
+                        文本将被正常包装。</p>
+                    <p class=" whitespace-pre-wrap">whitespace-pre-wrap 来保留元素中的换行和空格。          
+                        
+                        文本将被正常包装。</p>
+                    <p><span class="text-red-800">文本换行：</span></p>
+                    <p class="w-52 break-normal">break-normal 只在正常的换行点添加换行符 Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    <p class="w-52 break-words">break-words 在词中间添加换行符 Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    <p class="w-52 break-all">break-all 在必要的时候添加换行符，而不是试图保留整个单词 Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
                 </article>
                 <code-area codeTitle="文本：" :codeContent="code2"></code-area>
             </figure>
@@ -84,17 +133,17 @@ export default defineComponent({
             '列表项标记位置：list-inside list-outside'
         ]
         const code2 = [
-            '占位文本颜色：',
-            '占位文本不透明度：',
-            '文本对齐：',
-            '文本颜色：',
-            '文本颜色不透明度：',
-            '文本装饰：',
-            '文本转换：',
-            '文本溢出：',
-            '垂直对齐：',
-            '空格：',
-            '文本换行：'
+            '占位文本颜色：placeholder-{color}-{number}',
+            '占位文本不透明度：placeholder-opacity-{number}',
+            '文本对齐：text-left text-center text-right text-justify(尽量充斥整个容器)',
+            '文本颜色：text-transparent text-current text-{color}-{number}',
+            '文本颜色不透明度：text-opacity-{number}',
+            '文本装饰：underline line-through no-underline',
+            '文本转换：uppercase lowercase capitalize normal-case',
+            '文本溢出：truncate overflow-ellipsis overflow-clip',
+            '垂直对齐：align-baseline align-top align-middle align-bottom align-text-top align-text-bottom',
+            '空格：whitespace-normal whitespace-nowrap whitespace-pre whitespace-pre-line whitespace-pre-wrap',
+            '文本换行：break-normal break-words break-all'
         ]
         return {
             code1,
